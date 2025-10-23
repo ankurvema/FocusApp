@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InControl - ADHD Management Made Simple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8B5CF6;
+            --primary-dark: #7C3AED;
+            --secondary: #10B981;
+            --accent: #F59E0B;
+            --bg: #0F172A;
+            --bg-card: #1E293B;
+            --text: #F1F5F9;
+            --text-muted: #94A3B8;
+            --gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Floating Contact Button */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-contact a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4);
+            transition: all 0.3s;
+        }
+
+        .floating-contact a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(139, 92, 246, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 55px;
+            height: 55px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .brand-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-cta {
+            background: var(--gradient);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .header-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+            top: -200px;
+            left: -100px;
+            animation: float 20s infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%);
+            bottom: -150px;
+            right: -100px;
+            animation: float 15s infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(50px, 50px) rotate(180deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #F1F5F9 0%, #CBD5E1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 18px 45px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: var(--primary-dark);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 0;
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Problems Section */
+        .problems {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #F1F5F9 0%, #CBD5E1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .problem-card {
+            background: var(--bg-card);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .problem-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .problem-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .problem-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        .problem-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: all 0.4s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 100px 0;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 60px auto 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .timeline-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        .timeline-content p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Differentiators */
+        .differentiators {
+            padding: 100px 0;
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .diff-card {
+            background: var(--bg-card);
+            padding: 35px;
+            border-radius: 20px;
+            border-left: 5px solid var(--secondary);
+            transition: all 0.3s;
+        }
+
+        .diff-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+        }
+
+        .diff-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .diff-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .contact-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 60px 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .contact-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-card p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: rgba(139, 92, 246, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .contact-method:hover {
+            background: rgba(139, 92, 246, 0.2);
+            border-color: var(--primary);
+            transform: scale(1.02);
+        }
+
+        .contact-icon {
+            font-size: 1.8rem;
+        }
+
+        .contact-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #F1F5F9 0%, #CBD5E1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .footer-content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .footer-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding-top: 30px;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .hero-cta { flex-direction: column; align-items: center; }
+            .section-title { font-size: 2rem; }
+            .brand-name { font-size: 1.4rem; }
+            .timeline::before { display: none; }
+            .timeline-item { flex-direction: column !important; margin-bottom: 40px; }
+            .timeline-content { width: 100%; }
+            .timeline-number { position: relative; left: 0; transform: none; margin-bottom: 20px; }
+            .floating-contact { bottom: 20px; right: 20px; }
+            .floating-contact a { padding: 14px 20px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Contact Button -->
+    <div class="floating-contact">
+        <a href="mailto:ankuriosdev@gmail.com">
+            <span>📧</span>
+            <span>Get Support</span>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="nav-container">
+                <div class="logo-container">
+                    <img src="https://ankurvema.github.io/FocusApp/final.png" alt="InControl Logo" class="logo">
+                    <span class="brand-name">InControl</span>
+                </div>
+                <a href="#contact" class="header-cta">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">✨ ADHD-Friendly by Design</div>
+                <h1>Take Control of Your Day with Focus That Works</h1>
+                <p>Simple, encouraging tools that help you plan, start, stay focused, and finish with a sense of progress. Built specifically for adults with ADHD.</p>
+                <div class="hero-cta">
+                    <a href="#features" class="btn-primary">
+                        <span>Discover Features</span>
+                        <span>→</span>
+                    </a>
+                    <a href="#contact" class="btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>4</h3>
+                    <p>Core Pillars</p>
+                </div>
+                <div class="stat-item">
+                    <h3>∞</h3>
+                    <p>Small Wins</p>
+                </div>
+                <div class="stat-item">
+                    <h3>0</h3>
+                    <p>Judgment</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Privacy First</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">The Challenges We Address</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <span class="problem-icon">🚀</span>
+                    <h3>Getting Started</h3>
+                    <p>Struggling to decide what to do now and how to begin without feeling overwhelmed</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">🎯</span>
+                    <h3>Staying on Task</h3>
+                    <p>Avoiding distractions and preventing mental drift during important work</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">⚡</span>
+                    <h3>Overwhelm & Hyperfocus</h3>
+                    <p>Knowing when to pause, reset, and take care of yourself</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">💪</span>
+                    <h3>Motivation</h3>
+                    <p>Seeing small wins that build momentum and confidence</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">📊</span>
+                    <h3>Awareness</h3>
+                    <p>Understanding how your time is actually being spent</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Four Pillars of InControl</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Plan</h3>
+                    <p>Turn today's to-dos into clear time blocks. Drag tasks into 25-120 minute sessions with automatic break suggestions. No more decision paralysis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Focus</h3>
+                    <p>Use a clean, full-screen timer with optional calming sounds like rain, nature, or white noise. Start with one tap and stay in the zone.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎖️</div>
+                    <h3>Motivate</h3>
+                    <p>Earn gentle badges and celebrate small wins. Build streaks and see your progress with positive reinforcement that actually feels good.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Reflect</h3>
+                    <p>See simple usage insights to understand what works and make better choices tomorrow. No judgment, just helpful data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">A Day with InControl</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Morning (2 minutes)</h3>
+                        <p>Pick 3-5 tasks and drag them into a simple plan for your day. Clear, visual, and stress-free planning.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>During Work</h3>
+                        <p>Start a 50-minute focus session with rain sounds. Get a gentle reminder when it's time for a short break.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>After Lunch</h3>
+                        <p>Use the "Starter" nudge to get going again. Earn a streak badge for completing day 3 of consistent focus.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Evening</h3>
+                        <p>Check the insights screen to see what worked and what didn't, then plan tomorrow's first block with confidence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators -->
+    <section class="differentiators">
+        <div class="container">
+            <h2 class="section-title">What Makes InControl Different</h2>
+            <div class="diff-grid">
+                <div class="diff-card">
+                    <h3>✨ ADHD-Friendly by Design</h3>
+                    <p>Clear steps, low friction, supportive language, and dyslexia-friendly font options. Every feature is designed with ADHD in mind.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>⚡ Action-First</h3>
+                    <p>Helps you decide and start now—not just another long to-do list that makes you feel overwhelmed.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>🎯 Positive Motivation</h3>
+                    <p>Small wins, streaks, and gentle celebrations. No guilt, no pressure, just encouragement to keep going.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>🔒 Privacy-Respecting</h3>
+                    <p>Your personal usage information stays on your device unless you choose otherwise. No judgmental language or dark patterns.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>🌈 Hyperfocus Recovery</h3>
+                    <p>Unique feature that suggests quick light tasks to help you reset when you've gone too long—fold clothes, tidy desk, short walk.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>🎨 Comfortable Experience</h3>
+                    <p>Large tap areas, light/dark themes, clear text, and accessibility options. Designed for real human brains.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-card">
+                <h2>Let's Talk About InControl</h2>
+                <p>Have questions? Want to learn more? We're here to help you feel in control.</p>
+                <div class="contact-methods">
+                    <a href="mailto:ankuriosdev@gmail.com" class="contact-method">
+                        <span class="contact-icon">📧</span>
+                        <span class="contact-text">ankuriosdev@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Feel in Control More Often?</h2>
+            <p>Join adults with ADHD who are planning better, focusing longer, and finishing with pride.</p>
+            <a href="mailto:ankuriosdev@gmail.com" class="btn-primary">
+                <span>Get Started Today</span>
+                <span>→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>InControl</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Clear. Kind. Practical.</p>
+                <p style="color: var(--text-muted);">Helping adults with ADHD feel in control of their day.</p>
+            </div>
+            <div class="footer
