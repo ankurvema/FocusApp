@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SyncFit - Support</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    background: #ffffff;
+  }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h1 span { color: #2ec4b6; }
+  .updated { color: #777; font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 18px; margin-top: 32px; margin-bottom: 8px; color: #111; }
+  p { margin: 0 0 16px; }
+  ul { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  a { color: #2ec4b6; }
+</style>
+</head>
+<body>
+  <h1>SyncFit <span>Support</span></h1>
+  <p class="updated">Last updated: September 26, 2026</p>
+
+  <h2>Need help?</h2>
+  <p>Email <a href="mailto:ankuriosdev@gmail.com">ankuriosdev@gmail.com</a>. Please include your device model, your iOS version and the app version (Settings tab, at the bottom of the screen) so we can help faster. The Contact Support button inside the app fills all of that in for you.</p>
+
+  <h2>What does SyncFit do?</h2>
+  <p>SyncFit copies the health and activity data from your Fitbit account into Apple Health on your iPhone, so everything lives in one place. You choose which metrics to sync. The transfer runs directly between your phone, Fitbit and Apple Health — nothing passes through our servers.</p>
+
+  <h2>How do I connect my Fitbit account?</h2>
+  <p>On the Home tab, tap <strong>Connect</strong> on the Fitbit card. Fitbit's own sign-in page opens in a secure browser window. Sign in there and approve the permissions. SyncFit never sees your Fitbit password.</p>
+
+  <h2>Nothing appears in Apple Health</h2>
+  <p>Check these in order:</p>
+  <ul>
+    <li>The Fitbit card on the Home tab says <strong>Connected</strong>.</li>
+    <li>The Apple Health card says <strong>Connected</strong>. If not, tap Enable and allow the categories you want.</li>
+    <li>Open the iOS Settings app → Privacy &amp; Security → Health → SyncFit and make sure the metrics you want are switched on. Apple only asks once, so a category turned off here stays off.</li>
+    <li>The metric is enabled on the Metrics tab.</li>
+    <li>Your Fitbit device has actually synced to the Fitbit app recently — SyncFit can only copy data that has already reached your Fitbit account.</li>
+  </ul>
+
+  <h2>"Fitbit's hourly request limit was reached"</h2>
+  <p>Fitbit limits how many requests an app may make per hour for each account. A full sync of many metrics uses a large share of that budget, so running several syncs back to back can hit the limit. Wait an hour and try again, or reduce the number of enabled metrics or the sync window (Settings → Resync Past Days).</p>
+
+  <h2>How far back does it sync?</h2>
+  <p>Up to 7 days, and you can lower that in Settings → Resync Past Days. The limit exists to stay within Fitbit's hourly request budget. SyncFit is designed to keep Health topped up going forward, not to import your entire Fitbit history.</p>
+
+  <h2>Will I get duplicate entries in Health?</h2>
+  <p>No. Each sample SyncFit writes carries a stable identifier, so re-syncing the same day replaces the previous entry instead of adding another one.</p>
+
+  <h2>Why is my heart rate only one value per day?</h2>
+  <p>Minute-by-minute heart rate requires a separate "intraday" permission from Fitbit that is not granted to every app. When it is unavailable, SyncFit falls back to your daily resting heart rate so the metric still syncs.</p>
+
+  <h2>What is auto sync?</h2>
+  <p>Auto sync lets SyncFit refresh your data in the background so you do not have to open the app. It is included with SyncFit Pro and Lifetime. iOS decides exactly when background refreshes run, so the timing varies. Make sure Background App Refresh is enabled for SyncFit in the iOS Settings app, and that Low Power Mode is off.</p>
+
+  <h2>Managing your subscription</h2>
+  <p>Subscriptions are handled by Apple. To view, change or cancel one, open the iOS Settings app, tap your name, then Subscriptions. If you bought Lifetime access, or reinstalled the app, tap <strong>Restore Purchases</strong> on the paywall to unlock it again on the same Apple Account.</p>
+
+  <h2>How do I disconnect Fitbit?</h2>
+  <p>Settings tab → Log Out. That deletes the stored Fitbit token from your device. You can also revoke SyncFit's access from your Fitbit account settings at any time. Data already written to Apple Health stays there; you can remove it from inside the Health app.</p>
+
+  <h2>Privacy</h2>
+  <p>See the <a href="https://ankurvema.github.io/FocusApp/syncfit.html">SyncFit Privacy Policy</a>.</p>
+</body>
+</html>
