@@ -4,13 +4,15 @@ name: Update Framify top frames
 # ISO week has fully ended by then) and commits framify/TopFrames.json.
 # The Framify app downloads that file. Run it by hand from the Actions tab
 # with "Run workflow" for the first backfill.
-# The weekly schedule is off until the GA_SERVICE_ACCOUNT_JSON secret exists
-# (otherwise every Monday run would fail). To turn it on, uncomment the two
-# schedule lines below.
 on:
-  # schedule:
-  #   - cron: "0 6 * * 1"
+  schedule:
+    - cron: "0 6 * * 1"
   workflow_dispatch:
+    inputs:
+      refresh:
+        description: "Re-fetch every week and month, not just the newest"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -30,7 +32,8 @@ jobs:
         run: |
           echo "$GA_SERVICE_ACCOUNT_JSON" > "$RUNNER_TEMP/ga-key.json"
           export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/ga-key.json"
-          python scripts/export_top_frames.py --out framify/TopFrames.json
+          if [ "${{ inputs.refresh }}" = "true" ]; then EXTRA="--refresh"; else EXTRA=""; fi
+          python scripts/export_top_frames.py --out framify/TopFrames.json $EXTRA
           rm -f "$RUNNER_TEMP/ga-key.json"
       - name: Commit if changed
         run: |
