@@ -1,9 +1,9 @@
 name: Update Framify top frames
 
 # Pulls per-frame usage from Google Analytics every Monday (the previous
-# ISO week has fully ended by then) and commits framify/TopFrames.json.
-# The Framify app downloads that file. Run it by hand from the Actions tab
-# with "Run workflow" for the first backfill.
+# Sunday-Saturday week has fully ended by then) and commits
+# framify/TopFrames.json, which the Framify app downloads. It can also be
+# run by hand from the Actions tab; tick the option to re-fetch every period.
 on:
   schedule:
     - cron: "0 6 * * 1"
