@@ -1,0 +1,40 @@
+name: Update Framify top frames
+
+# Pulls per-frame usage from Google Analytics every Monday (the previous
+# ISO week has fully ended by then) and commits framify/TopFrames.json.
+# The Framify app downloads that file. Run it by hand from the Actions tab
+# with "Run workflow" for the first backfill.
+# The weekly schedule is off until the GA_SERVICE_ACCOUNT_JSON secret exists
+# (otherwise every Monday run would fail). To turn it on, uncomment the two
+# schedule lines below.
+on:
+  # schedule:
+  #   - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install google-analytics-data
+      - name: Export top frames
+        env:
+          GA_SERVICE_ACCOUNT_JSON: ${{ secrets.GA_SERVICE_ACCOUNT_JSON }}
+        run: |
+          echo "$GA_SERVICE_ACCOUNT_JSON" > "$RUNNER_TEMP/ga-key.json"
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/ga-key.json"
+          python scripts/export_top_frames.py --out framify/TopFrames.json
+          rm -f "$RUNNER_TEMP/ga-key.json"
+      - name: Commit if changed
+        run: |
+          git config user.name "framify-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add framify/TopFrames.json
+          git diff --cached --quiet || (git commit -m "Update Framify top frames" && git push)
