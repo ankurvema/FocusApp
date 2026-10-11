@@ -76,8 +76,8 @@ def completed_months(today):
     return months
 
 
-def fetch(client, prop, start, end, event_name=None):
-    """frame_id -> (active users, event count) for the date range."""
+def fetch(client, prop, start, end, event_name=None, dimension=DIMENSION):
+    """item id -> (active users, event count) for the date range."""
     from google.analytics.data_v1beta.types import (
         DateRange, Dimension, Filter, FilterExpression, Metric, RunReportRequest,
     )
@@ -92,7 +92,7 @@ def fetch(client, prop, start, end, event_name=None):
     while True:
         response = client.run_report(RunReportRequest(
             property=f"properties/{prop}",
-            dimensions=[Dimension(name=DIMENSION)],
+            dimensions=[Dimension(name=dimension)],
             metrics=[Metric(name="activeUsers"), Metric(name="eventCount")],
             date_ranges=[DateRange(start_date=start.isoformat(), end_date=end.isoformat())],
             dimension_filter=event_filter,
@@ -109,9 +109,9 @@ def fetch(client, prop, start, end, event_name=None):
             return result
 
 
-def build_period(client, prop, start, end, top):
-    used = fetch(client, prop, start, end)
-    saved = fetch(client, prop, start, end, "frame_saved")
+def build_period(client, prop, start, end, top, opts):
+    used = fetch(client, prop, start, end, opts.used_event, opts.dimension)
+    saved = fetch(client, prop, start, end, opts.saved_event, opts.dimension)
     frames = []
     for frame_id, (users, _) in used.items():
         save_users, saves = saved.get(frame_id, (0, 0))
@@ -155,11 +155,21 @@ def trending(weeks):
 
 
 def main():
+    global FIRST_DAY
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--property", default=DEFAULT_PROPERTY, help="GA4 property id")
     parser.add_argument("--out", default=DEFAULT_OUT)
     parser.add_argument("--refresh", action="store_true", help="re-fetch every period")
+    # Defaults are Framify. PicGrid: --property 214092288 --dimension customEvent:template
+    # --used-event collage_type_selected --saved-event collage_saved --static-overall
+    parser.add_argument("--dimension", default=DIMENSION, help="GA4 custom dimension holding the item id")
+    parser.add_argument("--used-event", default=None, help="count users of this event only (default: any event)")
+    parser.add_argument("--saved-event", default="frame_saved", help="event that means the item was saved")
+    parser.add_argument("--first-day", default=FIRST_DAY.isoformat(), help="first Sunday to fetch (YYYY-MM-DD)")
+    parser.add_argument("--static-overall", action="store_true",
+                        help="leave overall / current.overall as stored (seeded from older data)")
     args = parser.parse_args()
+    FIRST_DAY = dt.date.fromisoformat(args.first_day)
 
     try:
         from google.analytics.data_v1beta import BetaAnalyticsDataClient
@@ -178,7 +188,7 @@ def main():
         is_latest = index == len(weeks) - 1
         if label in data["weeks"] and not is_latest:
             continue
-        entry = build_period(client, args.property, start, end, WEEK_TOP)
+        entry = build_period(client, args.property, start, end, WEEK_TOP, args)
         if entry["frames"]:
             data["weeks"][label] = entry
             print(f"week  {label}  {len(entry['frames'])} frames")
@@ -186,18 +196,24 @@ def main():
     for label, start, end in completed_months(today):
         if label in data["months"]:
             continue
-        entry = build_period(client, args.property, start, end, MONTH_TOP)
+        entry = build_period(client, args.property, start, end, MONTH_TOP, args)
         if entry["frames"]:
             data["months"][label] = entry
             print(f"month {label}  {len(entry['frames'])} frames")
 
     if not data["weeks"]:
+        if args.static_overall:
+            print("No weekly data yet (is the dimension registered?); file left unchanged.")
+            return
         sys.exit("No per-frame data returned. Check the property id and the account's access.")
 
     ids = lambda entry: [frame["id"] for frame in entry["frames"]]
     latest_month = data["months"][sorted(data["months"])[-1]] if data["months"] else None
-    all_time = overall(data["weeks"])
-    data["overall"] = all_time
+    if args.static_overall:
+        all_time = data.get("overall", {"frames": []})
+    else:
+        all_time = overall(data["weeks"])
+        data["overall"] = all_time
     data["current"] = {
         "week": sorted(data["weeks"])[-1],
         "trending": trending(data["weeks"]),

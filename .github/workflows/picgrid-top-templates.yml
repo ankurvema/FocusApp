@@ -1,0 +1,46 @@
+name: Update PicGrid top templates
+
+# Same job as the Framify one, for PicGrid's GA4 property. Runs every Monday
+# after the previous Sunday-Saturday week has fully ended and commits
+# picgrid/TopTemplates.json, which PicGrid downloads. The stored "overall" list
+# (the 2025-26 annual ranking) is left alone until enough weeks exist to replace it.
+on:
+  schedule:
+    - cron: "30 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: "Re-fetch every week and month, not just the newest"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install google-analytics-data
+      - name: Export top templates
+        env:
+          GA_SERVICE_ACCOUNT_JSON: ${{ secrets.GA_SERVICE_ACCOUNT_JSON }}
+        run: |
+          echo "$GA_SERVICE_ACCOUNT_JSON" > "$RUNNER_TEMP/ga-key.json"
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/ga-key.json"
+          if [ "${{ inputs.refresh }}" = "true" ]; then EXTRA="--refresh"; else EXTRA=""; fi
+          python scripts/export_top_frames.py --out picgrid/TopTemplates.json \
+            --property 214092288 --dimension customEvent:template \
+            --used-event collage_type_selected --saved-event collage_saved \
+            --first-day 2026-10-11 --static-overall $EXTRA
+          rm -f "$RUNNER_TEMP/ga-key.json"
+      - name: Commit if changed
+        run: |
+          git config user.name "picgrid-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add picgrid/TopTemplates.json
+          git diff --cached --quiet || (git commit -m "Update PicGrid top templates" && git push)
