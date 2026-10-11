@@ -36,7 +36,7 @@ jobs:
           python scripts/export_top_frames.py --out picgrid/TopTemplates.json \
             --property 214092288 --dimension customEvent:template \
             --used-event collage_type_selected --saved-event collage_saved \
-            --first-day 2026-10-11 --static-overall $EXTRA
+            --first-day 2026-10-04 --static-overall $EXTRA
           rm -f "$RUNNER_TEMP/ga-key.json"
       - name: Commit if changed
         run: |
