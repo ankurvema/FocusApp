@@ -1,124 +1,422 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DashCam - Privacy Policy</title>
+<title>DashCam Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
 <style>
+  :root {
+    --paper:      #FBFAF7;
+    --surface:    #FFFFFF;
+    --ink:        #16191D;
+    --ink-soft:   #4A5058;
+    --ink-faint:  #767D86;
+    --rule:       #E4E1DA;
+    --accent:     #A8471B;
+    --stay:       #2F6B4F;
+    --stay-bg:    #EAF3EE;
+    --leave:      #8A5A00;
+    --leave-bg:   #FBF2DF;
+
+    --measure: 34rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #14161A;
+      --surface:   #1C1F24;
+      --ink:       #ECEAE5;
+      --ink-soft:  #A8AEB6;
+      --ink-faint: #7A818A;
+      --rule:      #2C3037;
+      --accent:    #E8875A;
+      --stay:      #6BC094;
+      --stay-bg:   #16281F;
+      --leave:     #D9A441;
+      --leave-bg:  #2A2113;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #14161A;
+    --surface:   #1C1F24;
+    --ink:       #ECEAE5;
+    --ink-soft:  #A8AEB6;
+    --ink-faint: #7A818A;
+    --rule:      #2C3037;
+    --accent:    #E8875A;
+    --stay:      #6BC094;
+    --stay-bg:   #16281F;
+    --leave:     #D9A441;
+    --leave-bg:  #2A2113;
+  }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: #222;
-    max-width: 760px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--measure);
     margin: 0 auto;
-    padding: 40px 20px 80px;
-    background: #ffffff;
+    padding-inline: 20px;
+    padding-block: 3.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+  }
+
+  /* ---- masthead ---- */
+  .masthead { display: flex; flex-direction: column; gap: 0.75rem; }
+  .eyebrow {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
   }
   h1 {
-    font-size: 28px;
-    margin-bottom: 4px;
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: clamp(2rem, 7vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    margin: 0;
+    text-wrap: balance;
   }
-  h1 span {
-    color: #618cff;
+  .dateline {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 0.875rem;
+    color: var(--ink-faint);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.1rem;
   }
-  .updated {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 32px;
+  .lede {
+    font-size: 1.1875rem;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent);
   }
+
+  /* ---- disposition summary ---- */
+  .summary { display: flex; flex-direction: column; gap: 0.5rem; }
+  .summary h2 { margin-bottom: 0.25rem; }
+  .ledger {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .ledger-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .ledger-row:last-child { border-bottom: 0; }
+  .ledger-row span {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+  }
+
+  .chip {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .chip::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    flex: none;
+  }
+  .chip.stay  { color: var(--stay);  background: var(--stay-bg); }
+  .chip.leave { color: var(--leave); background: var(--leave-bg); }
+
+  /* ---- sections ---- */
+  section { display: flex; flex-direction: column; gap: 0.7rem; }
   h2 {
-    font-size: 18px;
-    margin-top: 32px;
-    margin-bottom: 8px;
-    color: #111;
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 1.3125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    margin: 0;
+    text-wrap: balance;
   }
-  p {
-    margin: 0 0 16px;
+  .sec-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 0.75rem;
   }
-  ul {
-    margin: 0 0 16px;
-    padding-left: 22px;
+  p { margin: 0; }
+  ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+  li::marker { color: var(--ink-faint); }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, .ledger-row:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
   }
-  li {
-    margin-bottom: 8px;
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 0;
   }
-  a {
-    color: #618cff;
+
+  footer {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 0.875rem;
+    color: var(--ink-faint);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  @media (max-width: 460px) {
+    .ledger-row { grid-template-columns: 1fr; }
+    .ledger-row .chip { justify-self: start; }
   }
 </style>
-</head>
-<body>
-  <h1>DashCam <span>Privacy Policy</span></h1>
-  <p class="updated">Last updated: September 29, 2026</p>
 
-  <p>This page explains what information the DashCam app handles, how it is used, and the choices you have. By using the app you agree to the practices described here. DashCam records to your phone, not to a server. Your video, your audio and your GPS traces stay in the app's own storage on the device. There is one exception, it is off until you switch it on, and even then the data goes to your own iCloud account where we cannot read it.</p>
+<div class="wrap">
 
-  <h2>Video, Audio and Photos</h2>
-  <p>Recordings are written to DashCam's private storage area on your device. They are not uploaded, not shared and not visible to us. Loop recording deletes the oldest unlocked clip once your chosen storage cap is reached, and unlocked media is removed automatically after 30 days. Clips you lock, including those locked automatically when an impact is detected, are never deleted by either rule.</p>
-  <p>Exporting a clip or a time-lapse to your photo library, or sharing one through the iOS share sheet, happens only when you ask for it, and the destination is whichever app or person you choose.</p>
+  <header class="masthead">
+    <div class="eyebrow">DashCam · Mobile Drive Recorder</div>
+    <h1>Privacy Policy</h1>
+    <div class="dateline">
+      <span>Effective 14 October 2026</span>
+      <span>Applies to DashCam for iOS</span>
+    </div>
+  </header>
 
-  <h2>Location and Speed</h2>
-  <p>DashCam uses your location to show your speed, to draw the on-screen overlays and mini-map, and to record a speed and position track alongside each clip so an exported video can show what the display showed at that moment. All of it is stored on the device with the recordings.</p>
-  <p>Share Location sends your current position, and optionally the address, time and speed, to a person you pick, at the moment you tap it. Nothing is sent otherwise, and we never receive it.</p>
+  <p class="lede">
+    DashCam records to your phone, not to a server. Your video, your audio and your
+    GPS traces stay in the app's own storage on the device. There are two exceptions.
+    Both are off until you switch them on, and in both cases the data is stored in
+    Apple's iCloud in a form we cannot read.
+  </p>
 
-  <h2>Motion and Impact Detection</h2>
-  <p>The accelerometer is read continuously while recording so that a sudden impact can lock the surrounding footage before loop recording overwrites it. The readings are processed on the device and are not stored beyond a short rolling buffer, unless an impact occurs and you have turned on iCloud impact backup.</p>
+  <section class="summary">
+    <h2>Where each kind of data lives</h2>
+    <div class="ledger">
+      <div class="ledger-row"><span>Video and audio recordings</span><span class="chip stay">On your phone</span></div>
+      <div class="ledger-row"><span>Parked sentry photos and event videos</span><span class="chip stay">On your phone</span></div>
+      <div class="ledger-row"><span>GPS position and speed</span><span class="chip stay">On your phone</span></div>
+      <div class="ledger-row"><span>Accelerometer / impact data</span><span class="chip stay">On your phone</span></div>
+      <div class="ledger-row"><span>Driver monitoring face data</span><span class="chip stay">On your phone</span></div>
+      <div class="ledger-row"><span>Diagnostic logs</span><span class="chip stay">On your phone</span></div>
+      <div class="ledger-row"><span>Impact records, if you enable iCloud backup</span><span class="chip leave">Your iCloud</span></div>
+      <div class="ledger-row"><span>Twenty seconds of video around an impact, if you enable iCloud backup</span><span class="chip leave">Your iCloud</span></div>
+      <div class="ledger-row"><span>Your position while you share Live Location, encrypted</span><span class="chip leave">iCloud, readable only with your group code</span></div>
+      <div class="ledger-row"><span>Anonymous usage analytics</span><span class="chip leave">Our analytics provider</span></div>
+    </div>
+  </section>
 
-  <h2>Driver Monitoring</h2>
-  <p>Driver monitoring, when you enable it, watches the front camera for signs of a microsleep. Nothing is recorded while it runs. No image, no face landmark and no measurement derived from your face is stored or transmitted, to us or to anyone else.</p>
+  <hr>
 
-  <h2>iCloud Impact Backup</h2>
-  <p>This feature is off until you turn it on in Settings. When it is on and DashCam detects an impact, it saves a short record of that impact to your own private iCloud database, so that evidence of a crash survives even if the phone is damaged or lost. The record contains:</p>
-  <ul>
-    <li>the date and time of the impact;</li>
-    <li>the peak force measured, in g;</li>
-    <li>where it happened, and your speed and position over the twenty seconds leading up to it;</li>
-    <li>your device model and the app version;</li>
-    <li>a single still frame from the camera at the moment of impact.</li>
-  </ul>
-  <p>It does not contain the video. The clip stays on your phone.</p>
-  <p>The record is written to the private database of your iCloud account, the same place your personal app data lives. The sensitive fields and the still image are encrypted, and Apple's design means the developer of an app cannot read the private data of its users. We cannot see your impact records. They count against your iCloud storage allowance, not ours.</p>
-  <p>Turning the setting off stops any further uploads. To remove records already saved, you can delete DashCam's data from your iCloud account in the iOS Settings app, under your name, then iCloud.</p>
+  <section>
+    <div class="sec-head"><h2>Video, audio and photos</h2><span class="chip stay">On your phone</span></div>
+    <p>When parked Sentry person detection is enabled, camera frames are analyzed on your device to detect whether a person is present. This does not identify people. A confirmed detection starts a 30-second video saved in the app’s local gallery. Recognition results are discarded; parking event times and footage stay on your phone.</p>
+    <p>
+      Recordings are written to DashCam's private storage area on your device. They are
+      not uploaded, not shared and not visible to us. Loop recording deletes the oldest
+      unlocked clip once your chosen storage cap is reached, and unlocked media is removed
+      automatically after 30 days. Clips you lock, including those locked automatically by
+      impact detection, are never deleted by either rule.
+    </p>
+    <p>
+      Exporting a clip or a time-lapse to your photo library, or sharing one through the iOS
+      share sheet, happens only when you ask for it, and the destination is whichever app or
+      person you choose.
+    </p>
+  </section>
 
-  <h2>Usage Analytics</h2>
-  <p>To understand which features are used and where the app fails, DashCam sends anonymous product-usage events to Amplitude, our analytics provider. These are counts, durations, settings values and feature names, for example that a recording started, that a setting was changed, or that a purchase completed.</p>
-  <p>We never send coordinates, addresses, file names, video, photos, audio, or anything derived from your footage or your face. Amplitude assigns a random identifier to the installation and derives an approximate region from the network address, as described in its own documentation. There is no advertising identifier, no advertising, and no cross-app or cross-site tracking. DashCam does not sell your data and does not share it with data brokers.</p>
+  <section>
+    <div class="sec-head"><h2>Location and speed</h2><span class="chip stay">On your phone</span></div>
+    <p>
+      DashCam uses your location to show your speed, to draw the on-screen overlays and
+      mini-map, and to record a speed and position track alongside each clip so an exported
+      video can show what the display showed at that moment. All of it is stored on the
+      device with the recordings.
+    </p>
+    <p>
+      <strong>Share Location</strong> sends your current position, and optionally the address,
+      time and speed, to a person you pick, at the moment you tap it. Nothing is sent
+      otherwise, and we never receive it.
+    </p>
+    <p>
+      <strong>Live Location</strong> is the one way your position is sent continuously, and
+      only while you have turned it on. It is described in its own section below.
+    </p>
+  </section>
 
-  <h2>Purchases</h2>
-  <p>In-app purchases are handled entirely by Apple through the App Store. We never see your payment details. The app records only whether a purchase is active, so that it can unlock what you paid for.</p>
+  <section>
+    <div class="sec-head"><h2>Motion and impact detection</h2><span class="chip stay">On your phone</span></div>
+    <p>
+      The accelerometer is read continuously while recording so a sudden impact can lock the
+      surrounding footage before loop recording overwrites it. The readings are processed on
+      the device and are not stored beyond a short rolling buffer, unless an impact occurs
+      and you have turned on iCloud backup.
+    </p>
+  </section>
 
-  <h2>Diagnostic Logs</h2>
-  <p>DashCam keeps a technical log on the device to help diagnose problems such as a recording that stopped or a device that overheated. Logs are kept for seven days and then deleted. They are readable inside the app, and they leave the device only if you export and send them to us yourself.</p>
+  <section>
+    <div class="sec-head"><h2>Driver monitoring</h2><span class="chip stay">On your phone</span></div>
+    <p>
+      Driver monitoring, when you enable it, watches the front camera for signs of a
+      microsleep. Nothing is recorded while it runs. No image, no face landmark and no
+      measurement derived from your face is stored or transmitted, to us or to anyone else.
+    </p>
+  </section>
 
-  <h2>Information We Receive</h2>
-  <p>We do not operate servers that collect your information. If you email us for support, we receive whatever you choose to include in that email, and we use it only to answer you.</p>
+  <section>
+    <div class="sec-head"><h2>iCloud impact backup</h2><span class="chip leave">Your iCloud</span></div>
+    <p>
+      This feature is <strong>off until you turn it on</strong> in Settings. When it is on and
+      DashCam detects an impact, it saves a short record of that impact to
+      <strong>your own private iCloud database</strong>, so that evidence of a crash survives
+      even if the phone is damaged or lost. The record contains:
+    </p>
+    <ul>
+      <li>the date and time of the impact</li>
+      <li>the peak force measured, in g</li>
+      <li>where it happened, and your speed and position over the twenty seconds leading up to it</li>
+      <li>your device model and the app version</li>
+      <li>a single still frame from the camera at the moment of impact</li>
+    </ul>
+    <p>
+      Shortly afterwards, once that stretch of footage has finished recording, DashCam also
+      saves a <strong>twenty-second video</strong> of the impact &mdash; the ten seconds before
+      it and the ten seconds after &mdash; to the same private database. It is a reduced-size
+      copy made for upload; the full-resolution original stays on your phone and is never sent.
+      Nothing else you record is uploaded.
+    </p>
+    <p>
+      The record goes to the private database of your iCloud account, the same place your
+      personal app data lives. The sensitive fields and the still image are encrypted, and
+      Apple's design means the developer of an app cannot read the private data of its users.
+      <strong>We cannot see your impact records or the video that goes with them.</strong> They
+      count against your iCloud storage allowance, not ours.
+    </p>
+    <p>
+      Turning the setting off stops any further uploads, including a video that has been
+      prepared but not yet sent. To remove records already saved, you
+      can delete DashCam's data from your iCloud account in iOS Settings under your name,
+      then iCloud.
+    </p>
+  </section>
 
-  <h2>Third Parties</h2>
-  <p>The third parties involved are Apple, which provides iCloud, In-App Purchases and the photo library, and Amplitude, which provides the anonymous usage analytics described above. We encourage you to review their policies for how they handle information.</p>
+  <section>
+    <div class="sec-head"><h2>Live Location</h2><span class="chip leave">iCloud, encrypted</span></div>
+    <p>
+      Live Location lets family or friends see each other on a map while driving. It is
+      <strong>off until you start or join a group</strong>, and your own position is only sent
+      while you have chosen to share it, for the time you pick (one, four or eight hours).
+      Joining a group to see others does not share your location.
+    </p>
+    <p>
+      While you share, DashCam sends your position every few seconds while the app is open:
+      your latitude and longitude, how accurate they are, your speed and direction of travel,
+      the time, and the name you chose to show the group. Before it leaves your phone, this is
+      <strong>encrypted with a key derived from your group code</strong>. It is stored in
+      DashCam's shared iCloud database, where only someone holding the code can decrypt it.
+      <strong>We cannot read it, and neither can Apple.</strong> What is stored readably is only
+      a scrambled group identifier and the time the entry expires.
+    </p>
+    <p>
+      Anyone you give the code to can see your position while you share, and can pass the code
+      on, so send it only to people you want to see you. Your entry is deleted when you stop
+      sharing or leave the group, and in any case expires fifteen minutes after its last update,
+      so a phone that is switched off or loses signal stops showing as a live position.
+    </p>
+  </section>
 
-  <h2>Security</h2>
-  <p>Recordings and logs are stored in DashCam's protected container on your device and are covered by the iPhone's own file protection. Impact records sent to iCloud are encrypted, and their sensitive fields are encrypted in a way that keeps them readable only within your own account. No method of electronic storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
+  <section>
+    <div class="sec-head"><h2>Usage analytics</h2><span class="chip leave">Our analytics provider</span></div>
+    <p>
+      To understand which features are used and where the app fails, DashCam sends anonymous
+      product-usage events to Amplitude, our analytics provider. These are counts, durations,
+      settings values and feature names, for example that a recording started, that a setting
+      was changed, or that a purchase completed.
+    </p>
+    <p>
+      During setup, you may optionally share a broad vehicle type (such as RV, truck,
+      or sedan) and occupation category. These answers are sent to Amplitude as usage
+      profile properties so we can understand users’ requirements and prioritize improvements.
+      You can skip the step or choose “Prefer not to say” for either answer. We do not ask
+      for your employer, income, vehicle registration, or any free-text occupation details.
+    </p>
+    <p>
+      We never send coordinates, addresses, file names, video, photos, audio, or anything
+      derived from your footage or your face. Amplitude assigns a random identifier to the
+      installation and derives an approximate region from the network address, as described
+      in its own documentation. There is no advertising identifier, no advertising, and no
+      cross-app or cross-site tracking. DashCam does not sell data, and does not share it with
+      data brokers.
+    </p>
+  </section>
 
-  <h2>Safety Disclaimer</h2>
-  <p>DashCam is a recording tool and is not a safety system. Impact detection, driver monitoring and speed display can be wrong, delayed or unavailable, and they are no substitute for attentive driving or for stopping when you are tired. Do not operate the app while driving, and mount your phone so it does not obstruct your view.</p>
+  <section>
+    <div class="sec-head"><h2>Purchases</h2><span class="chip leave">Apple</span></div>
+    <p>
+      In-app purchases are handled entirely by Apple through the App Store. We never see your
+      payment details. The app records only whether a purchase is active, so it can unlock
+      what you paid for.
+    </p>
+  </section>
 
-  <h2>Children's Privacy</h2>
-  <p>DashCam is intended for licensed drivers. The app is not directed at children under 13 and we do not knowingly collect personal information from children under 13.</p>
+  <section>
+    <div class="sec-head"><h2>Diagnostic logs</h2><span class="chip stay">On your phone</span></div>
+    <p>
+      DashCam keeps a technical log on the device to help diagnose problems such as a
+      recording that stopped or a device that overheated. Logs are kept for seven days and
+      then deleted. They are readable in the app, and they leave the device only if you
+      export and send them to us yourself.
+    </p>
+  </section>
 
-  <h2>Your Choices</h2>
-  <ul>
-    <li>You can turn iCloud impact backup on or off at any time in Settings; it is off by default.</li>
-    <li>You can turn impact detection and driver monitoring on or off in Settings.</li>
-    <li>You can change or remove camera, microphone, location, motion and photo permissions in the iOS Settings app.</li>
-    <li>You can delete any recording or photo from inside the app.</li>
-    <li>You can delete DashCam's iCloud data from the iOS Settings app, under your name, then iCloud.</li>
-    <li>Deleting the app removes all of its local recordings, photos and logs from your device.</li>
-  </ul>
+  <section>
+    <div class="sec-head"><h2>Children</h2></div>
+    <p>
+      DashCam is not directed at children under 13, and we do not knowingly collect personal
+      information from them. If you believe a child has provided us information, contact us
+      and we will delete it.
+    </p>
+  </section>
 
-  <h2>Changes to This Privacy Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page and are effective immediately once posted, so please review this page periodically.</p>
+  <section>
+    <div class="sec-head"><h2>Changes to this policy</h2></div>
+    <p>
+      If this policy changes in a way that affects what leaves your device, we will update the
+      effective date above and describe the change in the app's release notes. Continuing to
+      use DashCam after a change means you accept the revised policy.
+    </p>
+  </section>
 
-  <h2>Contact</h2>
-  <p>If you have questions about this Privacy Policy, email us at <a href="mailto:ankuriosdev@gmail.com">ankuriosdev@gmail.com</a>.</p>
-</body>
-</html>
+  <hr>
+
+  <footer>
+    <div>Questions about this policy, or a request to delete data: <a href="mailto:ankuriosdev@gmail.com">ankuriosdev@gmail.com</a></div>
+    <div>DashCam: Mobile Drive Recorder · Ankur Chauhan</div>
+  </footer>
+
+</div>
