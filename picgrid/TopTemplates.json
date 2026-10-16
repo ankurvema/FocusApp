@@ -189,6 +189,18 @@
   "current": {
     "week": "2026-08-23",
     "trending": [],
+    "last7": [
+      "SimpleCollage_1.png",
+      "SimpleCollage_2.png",
+      "shape_collage_25.png",
+      "SimpleCollage_8.png",
+      "SimpleCollage.png",
+      "SimpleCollage_138.jpg",
+      "ShapesCollageNo_1.png",
+      "SimpleCollage_6.png",
+      "FilmFrame_1_Thumb.jpg",
+      "SimpleCollage_5.png"
+    ],
     "month": [],
     "overall": [
       "SimpleCollage_1.png",
@@ -223,5 +235,5 @@
       "FilmFrame_5_Thumb.jpg"
     ]
   },
-  "generated": "2026-10-11"
+  "generated": "2026-10-16"
 }
