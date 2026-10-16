@@ -1,0 +1,384 @@
+<meta charset="utf-8">
+<title>DashCam Terms of Use</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  :root {
+    --paper:      #FBFAF7;
+    --surface:    #FFFFFF;
+    --ink:        #16191D;
+    --ink-soft:   #4A5058;
+    --ink-faint:  #767D86;
+    --rule:       #E4E1DA;
+    --accent:     #A8471B;
+    --stay:       #2F6B4F;
+    --stay-bg:    #EAF3EE;
+    --leave:      #8A5A00;
+    --leave-bg:   #FBF2DF;
+
+    --measure: 34rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #14161A;
+      --surface:   #1C1F24;
+      --ink:       #ECEAE5;
+      --ink-soft:  #A8AEB6;
+      --ink-faint: #7A818A;
+      --rule:      #2C3037;
+      --accent:    #E8875A;
+      --stay:      #6BC094;
+      --stay-bg:   #16281F;
+      --leave:     #D9A441;
+      --leave-bg:  #2A2113;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #14161A;
+    --surface:   #1C1F24;
+    --ink:       #ECEAE5;
+    --ink-soft:  #A8AEB6;
+    --ink-faint: #7A818A;
+    --rule:      #2C3037;
+    --accent:    #E8875A;
+    --stay:      #6BC094;
+    --stay-bg:   #16281F;
+    --leave:     #D9A441;
+    --leave-bg:  #2A2113;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 3.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+  }
+
+  /* ---- masthead ---- */
+  .masthead { display: flex; flex-direction: column; gap: 0.75rem; }
+  .eyebrow {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1 {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: clamp(2rem, 7vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .dateline {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 0.875rem;
+    color: var(--ink-faint);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.1rem;
+  }
+  .lede {
+    font-size: 1.1875rem;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent);
+  }
+
+  /* ---- disposition summary ---- */
+  .summary { display: flex; flex-direction: column; gap: 0.5rem; }
+  .summary h2 { margin-bottom: 0.25rem; }
+  .ledger {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .ledger-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .ledger-row:last-child { border-bottom: 0; }
+  .ledger-row span {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+  }
+
+  .chip {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .chip::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    flex: none;
+  }
+  .chip.stay  { color: var(--stay);  background: var(--stay-bg); }
+  .chip.leave { color: var(--leave); background: var(--leave-bg); }
+
+  /* ---- sections ---- */
+  section { display: flex; flex-direction: column; gap: 0.7rem; }
+  h2 {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 1.3125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .sec-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 0.75rem;
+  }
+  p { margin: 0; }
+  ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+  li::marker { color: var(--ink-faint); }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, .ledger-row:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 0;
+  }
+
+  footer {
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 0.875rem;
+    color: var(--ink-faint);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  @media (max-width: 460px) {
+    .ledger-row { grid-template-columns: 1fr; }
+    .ledger-row .chip { justify-self: start; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">DashCam · Mobile Drive Recorder</div>
+    <h1>Terms of Use</h1>
+    <div class="dateline">
+      <span>Effective 16 October 2026</span>
+      <span>Applies to DashCam for iOS</span>
+    </div>
+  </header>
+
+  <p class="lede">
+    DashCam is a dash camera that runs on your iPhone. These terms cover how you may use it,
+    how DashCam Pro subscriptions work, and what DashCam can and cannot promise you about
+    safety. By installing or using DashCam you agree to them.
+  </p>
+
+  <section class="summary">
+    <h2>DashCam Pro at a glance</h2>
+    <div class="ledger">
+      <div class="ledger-row"><span>Free trial</span><span>3 days, for new subscribers who are eligible</span></div>
+      <div class="ledger-row"><span>Plans</span><span>Monthly or yearly</span></div>
+      <div class="ledger-row"><span>Price</span><span>Shown in the app, in your currency, before you subscribe</span></div>
+      <div class="ledger-row"><span>Renewal</span><span>Automatic, until you cancel</span></div>
+      <div class="ledger-row"><span>Cancel</span><span>In your Apple Account settings, any time</span></div>
+      <div class="ledger-row"><span>Billing and refunds</span><span>Handled by Apple</span></div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="sec-head"><h2>1. Apple's standard license also applies</h2></div>
+    <p>
+      DashCam is licensed to you, not sold. Your use of the app is also governed by Apple's
+      Standard License Agreement for apps on the App Store (the "Standard EULA"), which you can read at
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a>.
+      We have not replaced it with a custom license. These terms add to the Standard EULA. If the two
+      disagree about your license to use the app, the Standard EULA wins. Apple is not a party to these terms
+      and is not responsible for the app, its support or its content.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>2. DashCam Pro subscriptions</h2></div>
+    <p>
+      Most of DashCam is free. DashCam Pro unlocks extra features and is sold as an auto-renewing
+      subscription, monthly or yearly. The price for your country is shown in the app and on the App Store
+      before you subscribe.
+    </p>
+    <ul>
+      <li><strong>Free trial.</strong> New subscribers who are eligible get a 3-day free trial. Apple decides
+        eligibility, and a trial can be used once per Apple Account. If you do not cancel at least 24 hours before
+        the trial ends, it turns into a paid subscription at the price shown when you signed up.</li>
+      <li><strong>Payment.</strong> Payment is charged to your Apple Account when you confirm the purchase, or at the
+        end of the free trial.</li>
+      <li><strong>Renewal.</strong> A subscription renews automatically for the same period unless you cancel at least
+        24 hours before the end of the current period. Apple charges your account for renewal within 24 hours before
+        the period ends.</li>
+      <li><strong>Managing and cancelling.</strong> Open Settings on your iPhone, tap your name, then Subscriptions,
+        and choose DashCam. You can also reach it from Settings in the app. Deleting the app does not cancel your
+        subscription. If you cancel, you keep Pro until the end of the period you already paid for, or until the
+        trial ends.</li>
+      <li><strong>Refunds.</strong> Apple handles all billing, so refund requests go to Apple at
+        <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. We cannot issue refunds
+        ourselves.</li>
+      <li><strong>Price changes.</strong> If a price changes, Apple tells you and, where the law requires it, asks for
+        your consent before you are charged the new price. If you do not agree, cancel before the next renewal.</li>
+      <li><strong>Unused trial.</strong> If you buy a subscription during a free trial, the rest of the trial ends.</li>
+    </ul>
+    <p>
+      What is in Pro is listed in the app and may change as we add features. Recording, impact detection and
+      locking, the gallery, sharing a clip, Sentry mode, the driving score and the basic driving HUD are
+      free. Pro currently covers Live Location sharing, driver monitoring, iCloud impact backup, the HUD Studio with
+      its custom HUDs, burned-in timestamp and speed on exports, and dual recording.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>3. Early Supporter</h2></div>
+    <p>
+      Before subscriptions, DashCam offered a one-time purchase called Early Supporter. If you bought it, you keep
+      every Pro feature without a subscription, including features added to Pro later. Use Restore Purchases in the
+      app to bring it back on a new phone. Early Supporter is no longer sold.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>4. Driving safely</h2></div>
+    <p>
+      DashCam is a tool, not a safety system, and it does not make driving safe. Please:
+    </p>
+    <ul>
+      <li>Mount your phone securely, where it does not block your view of the road or your airbags, and where the law allows it.</li>
+      <li>Do not touch or watch your phone while driving. Start recording before you set off, or have a passenger do it.</li>
+      <li>Do not rely on driver monitoring. It looks only for eyes that stay closed, needs good light, and misses
+        things. It is no substitute for stopping when you are tired.</li>
+      <li>Do not rely on impact detection. It can miss an incident or trigger when nothing happened, and DashCam does
+        not call emergency services for you. If anyone is hurt, call them yourself.</li>
+      <li>Treat the speed, location and driving score as estimates. They come from your phone's sensors and are not a
+        speedometer, a legal record or advice about speed limits.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>5. Recording, privacy and the law</h2></div>
+    <p>
+      Laws about filming in vehicles, recording audio, notifying passengers, windshield mounts and sharing footage
+      differ from place to place. You are responsible for knowing and following the ones that apply to you. Do not use
+      DashCam to record people in ways the law forbids. If you share footage, a location or a Live Location code,
+      you are responsible for what you share and who you share it with.
+    </p>
+    <p>
+      Live Location is meant for family, friends and groups who have agreed to see each other. Do not use it to track
+      anyone without their knowledge and consent.
+    </p>
+    <p>
+      How DashCam handles your data is described in the
+      <a href="https://ankurvema.github.io/FocusApp/dashcam.html">Privacy Policy</a>. Your recordings stay on your phone unless you choose to share or back
+      them up.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>6. Your footage and backups</h2></div>
+    <p>
+      You own your recordings. DashCam stores them on your phone and removes older, unlocked clips when it needs room,
+      as your storage and retention settings say. Lock anything you need to keep, and export it. iCloud backup and
+      Live Location use your iCloud account and Apple's services, which have their own limits, outages and terms.
+      We cannot guarantee that a recording is saved, kept or recoverable.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>7. Using the app properly</h2></div>
+    <p>
+      Do not copy, modify, reverse engineer or resell DashCam, use it to break the law, interfere with it or the
+      services it relies on, or work around the limits of the free version or a subscription. DashCam and its design,
+      name and code belong to us and our licensors, apart from the license in section 1.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>8. No warranty, and limits on our liability</h2></div>
+    <p>
+      DashCam is provided "as is" and "as available". To the fullest extent the law allows, we do not promise that it will
+      be uninterrupted, error free or fit for a particular purpose, or that it will record or detect any particular
+      event. To the fullest extent the law allows, we are not liable for indirect or consequential losses, for lost
+      footage or data, or for any harm that follows from relying on the app while driving. Our total liability to you
+      for anything connected with DashCam is limited to what you paid us in the twelve months before the claim.
+    </p>
+    <p>
+      Nothing in these terms limits any right you have under consumer law where you live that cannot be limited by
+      agreement, or liability that cannot be excluded by law.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>9. Ending your use</h2></div>
+    <p>
+      You can stop using DashCam at any time by deleting it and cancelling any subscription. We may suspend or end
+      access if you break these terms. Sections that by their nature should continue after that, such as sections 4 to 8,
+      continue.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>10. Changes to these terms</h2></div>
+    <p>
+      We may update these terms. When we do, we will change the effective date above and describe the change in the
+      app's release notes. Continuing to use DashCam after a change means you accept the revised terms. If you do not
+      accept them, stop using the app and cancel any subscription.
+    </p>
+  </section>
+
+  <hr>
+
+  <footer>
+    <div>Questions about these terms: <a href="mailto:ankuriosdev@gmail.com">ankuriosdev@gmail.com</a></div>
+    <div><a href="https://ankurvema.github.io/FocusApp/dashcam.html">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard License Agreement</a></div>
+    <div>DashCam: Mobile Drive Recorder · Ankur Chauhan</div>
+  </footer>
+
+</div>
