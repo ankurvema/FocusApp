@@ -14,7 +14,8 @@ Marketing/Analytics/TopFrames.json with:
            distinct users cannot be added across periods, so a user who
            returns every week counts every week)
   current  what the app reads: trending (latest week vs the previous four),
-           month (latest month), overall
+           last7 (top frames of the last 7 completed days, rolling, so it
+           changes on every run), month (latest month), overall
 
 Weeks with no frame data (the first ones) are skipped.
 
@@ -48,6 +49,7 @@ WEEK_TOP = 100
 MONTH_TOP = 30
 OVERALL_TOP = 30
 TREND_TOP = 12
+LAST7_TOP = 10
 TREND_MIN_USERS = 15
 TREND_BASELINE_WEEKS = 4
 DIMENSION = "customEvent:frame_id"
@@ -201,7 +203,13 @@ def main():
             data["months"][label] = entry
             print(f"month {label}  {len(entry['frames'])} frames")
 
-    if not data["weeks"]:
+    # Rolling window ending yesterday (today is still partial in GA).
+    last7_end = today - dt.timedelta(days=1)
+    last7_start = max(last7_end - dt.timedelta(days=6), FIRST_DAY)
+    last7 = build_period(client, args.property, last7_start, last7_end, LAST7_TOP, args) if last7_start <= last7_end else {"frames": []}
+    print(f"last7 {last7_start}/{last7_end}  {len(last7['frames'])} frames")
+
+    if not data["weeks"] and not last7["frames"]:
         if args.static_overall:
             print("No weekly data yet (is the dimension registered?); file left unchanged.")
             return
@@ -215,8 +223,9 @@ def main():
         all_time = overall(data["weeks"])
         data["overall"] = all_time
     data["current"] = {
-        "week": sorted(data["weeks"])[-1],
-        "trending": trending(data["weeks"]),
+        "week": sorted(data["weeks"])[-1] if data["weeks"] else data.get("current", {}).get("week", FIRST_DAY.isoformat()),
+        "trending": trending(data["weeks"]) if data["weeks"] else [],
+        "last7": ids(last7),
         "month": ids(latest_month) if latest_month else [],
         "overall": ids(all_time),
     }

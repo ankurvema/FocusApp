@@ -1,12 +1,13 @@
 name: Update PicGrid top templates
 
-# Same job as the Framify one, for PicGrid's GA4 property. Runs every Monday
-# after the previous Sunday-Saturday week has fully ended and commits
-# picgrid/TopTemplates.json, which PicGrid downloads. The stored "overall" list
-# (the 2025-26 annual ranking) is left alone until enough weeks exist to replace it.
+# Same job as the Framify one, for PicGrid's GA4 property. Runs every day: it
+# refreshes the rolling last-7-days ranking (current.last7, the app's Trending
+# row) and commits picgrid/TopTemplates.json, which PicGrid downloads. The stored
+# "overall" list (the 2025-26 annual ranking) is left alone until enough weeks
+# exist to replace it.
 on:
   schedule:
-    - cron: "30 6 * * 1"
+    - cron: "30 6 * * *"
   workflow_dispatch:
     inputs:
       refresh:
