@@ -4234,6 +4234,611 @@
           "saves": 2
         }
       ]
+    },
+    "2026-10-11": {
+      "window": "2026-10-11/2026-10-17",
+      "frames": [
+        {
+          "id": "Halloween-18",
+          "users": 108,
+          "save_users": 24,
+          "saves": 31
+        },
+        {
+          "id": "Rose-Day-1",
+          "users": 84,
+          "save_users": 22,
+          "saves": 35
+        },
+        {
+          "id": "Trending-1",
+          "users": 57,
+          "save_users": 13,
+          "saves": 16
+        },
+        {
+          "id": "Autumn-17",
+          "users": 50,
+          "save_users": 4,
+          "saves": 17
+        },
+        {
+          "id": "Halloween-6",
+          "users": 49,
+          "save_users": 5,
+          "saves": 6
+        },
+        {
+          "id": "Autumn-2",
+          "users": 47,
+          "save_users": 9,
+          "saves": 14
+        },
+        {
+          "id": "Halloween-23",
+          "users": 40,
+          "save_users": 8,
+          "saves": 11
+        },
+        {
+          "id": "Chocolate-Day-1",
+          "users": 39,
+          "save_users": 6,
+          "saves": 6
+        },
+        {
+          "id": "Halloween-Trending-46",
+          "users": 38,
+          "save_users": 10,
+          "saves": 21
+        },
+        {
+          "id": "Gold-Diamonds-1",
+          "users": 36,
+          "save_users": 8,
+          "saves": 10
+        },
+        {
+          "id": "Golden-1",
+          "users": 34,
+          "save_users": 8,
+          "saves": 10
+        },
+        {
+          "id": "Rose-Day-2",
+          "users": 31,
+          "save_users": 8,
+          "saves": 10
+        },
+        {
+          "id": "Winters-1",
+          "users": 31,
+          "save_users": 7,
+          "saves": 38
+        },
+        {
+          "id": "Halloween-32",
+          "users": 30,
+          "save_users": 9,
+          "saves": 9
+        },
+        {
+          "id": "Halloween-54",
+          "users": 29,
+          "save_users": 6,
+          "saves": 6
+        },
+        {
+          "id": "Autumn-16",
+          "users": 29,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "Birthday-59",
+          "users": 28,
+          "save_users": 9,
+          "saves": 13
+        },
+        {
+          "id": "Birthday-8",
+          "users": 28,
+          "save_users": 9,
+          "saves": 24
+        },
+        {
+          "id": "Halloween-99",
+          "users": 27,
+          "save_users": 9,
+          "saves": 16
+        },
+        {
+          "id": "Halloween-Trending-47",
+          "users": 27,
+          "save_users": 2,
+          "saves": 19
+        },
+        {
+          "id": "Birthday-21",
+          "users": 25,
+          "save_users": 7,
+          "saves": 12
+        },
+        {
+          "id": "Golden-2",
+          "users": 25,
+          "save_users": 7,
+          "saves": 10
+        },
+        {
+          "id": "Autumn-1",
+          "users": 25,
+          "save_users": 6,
+          "saves": 7
+        },
+        {
+          "id": "Trending-2",
+          "users": 25,
+          "save_users": 5,
+          "saves": 5
+        },
+        {
+          "id": "Halloween-35",
+          "users": 24,
+          "save_users": 6,
+          "saves": 6
+        },
+        {
+          "id": "Metal-1",
+          "users": 24,
+          "save_users": 6,
+          "saves": 10
+        },
+        {
+          "id": "Halloween-Trending-48",
+          "users": 23,
+          "save_users": 4,
+          "saves": 4
+        },
+        {
+          "id": "Halloween-1",
+          "users": 22,
+          "save_users": 6,
+          "saves": 8
+        },
+        {
+          "id": "Autumn-19",
+          "users": 22,
+          "save_users": 5,
+          "saves": 26
+        },
+        {
+          "id": "Diamonds-1",
+          "users": 21,
+          "save_users": 7,
+          "saves": 11
+        },
+        {
+          "id": "Autumn-43",
+          "users": 21,
+          "save_users": 4,
+          "saves": 4
+        },
+        {
+          "id": "Halloween-Trending-51",
+          "users": 20,
+          "save_users": 5,
+          "saves": 6
+        },
+        {
+          "id": "Autumn-20",
+          "users": 20,
+          "save_users": 2,
+          "saves": 3
+        },
+        {
+          "id": "Halloween-14",
+          "users": 20,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Birthday-60",
+          "users": 19,
+          "save_users": 4,
+          "saves": 4
+        },
+        {
+          "id": "Autumn-18",
+          "users": 19,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Autumn-36",
+          "users": 18,
+          "save_users": 7,
+          "saves": 21
+        },
+        {
+          "id": "Baby-1",
+          "users": 18,
+          "save_users": 5,
+          "saves": 38
+        },
+        {
+          "id": "Birthday-9",
+          "users": 18,
+          "save_users": 4,
+          "saves": 7
+        },
+        {
+          "id": "Halloween-4",
+          "users": 18,
+          "save_users": 3,
+          "saves": 5
+        },
+        {
+          "id": "Autumn-46",
+          "users": 18,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Autumn-8",
+          "users": 18,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Halloween-20",
+          "users": 18,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Autumn-3",
+          "users": 18,
+          "save_users": 1,
+          "saves": 2
+        },
+        {
+          "id": "Birthday-29",
+          "users": 17,
+          "save_users": 7,
+          "saves": 8
+        },
+        {
+          "id": "Golden-3",
+          "users": 17,
+          "save_users": 6,
+          "saves": 11
+        },
+        {
+          "id": "Autumn-41",
+          "users": 17,
+          "save_users": 4,
+          "saves": 5
+        },
+        {
+          "id": "Halloween-25",
+          "users": 17,
+          "save_users": 4,
+          "saves": 6
+        },
+        {
+          "id": "Halloween-Trending-56",
+          "users": 17,
+          "save_users": 4,
+          "saves": 6
+        },
+        {
+          "id": "Rose-Day-3",
+          "users": 17,
+          "save_users": 3,
+          "saves": 3
+        },
+        {
+          "id": "Halloween-22",
+          "users": 17,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Halloween-3",
+          "users": 17,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "Halloween-15",
+          "users": 16,
+          "save_users": 4,
+          "saves": 7
+        },
+        {
+          "id": "Halloween-67",
+          "users": 16,
+          "save_users": 4,
+          "saves": 8
+        },
+        {
+          "id": "Autumn-28",
+          "users": 16,
+          "save_users": 3,
+          "saves": 3
+        },
+        {
+          "id": "Birthday-5",
+          "users": 16,
+          "save_users": 3,
+          "saves": 5
+        },
+        {
+          "id": "Birthday-57",
+          "users": 16,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "Gold-Diamonds-3",
+          "users": 16,
+          "save_users": 3,
+          "saves": 3
+        },
+        {
+          "id": "Halloween-21",
+          "users": 16,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "Halloween-71",
+          "users": 16,
+          "save_users": 3,
+          "saves": 6
+        },
+        {
+          "id": "Autumn-7",
+          "users": 16,
+          "save_users": 2,
+          "saves": 3
+        },
+        {
+          "id": "Halloween-9",
+          "users": 16,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Autumn-9",
+          "users": 16,
+          "save_users": 1,
+          "saves": 2
+        },
+        {
+          "id": "Birthday-14",
+          "users": 16,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "Christmas-1",
+          "users": 16,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "Halloween-24",
+          "users": 16,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "Golden-4",
+          "users": 15,
+          "save_users": 5,
+          "saves": 7
+        },
+        {
+          "id": "Birthday-41",
+          "users": 15,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "Halloween-Trending-52",
+          "users": 15,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "Halloween-5",
+          "users": 15,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Halloween-7",
+          "users": 15,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Autumn-6",
+          "users": 15,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "Wooden-2",
+          "users": 15,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "Celebration-11",
+          "users": 14,
+          "save_users": 6,
+          "saves": 8
+        },
+        {
+          "id": "Birthday-24",
+          "users": 14,
+          "save_users": 5,
+          "saves": 8
+        },
+        {
+          "id": "Birthday-63",
+          "users": 14,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "Halloween-56",
+          "users": 14,
+          "save_users": 3,
+          "saves": 3
+        },
+        {
+          "id": "Autumn-21",
+          "users": 14,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Metal-2",
+          "users": 14,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "Halloween-17",
+          "users": 14,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "Halloween-Trending-49",
+          "users": 14,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "Birthday-6",
+          "users": 13,
+          "save_users": 8,
+          "saves": 9
+        },
+        {
+          "id": "Halloween-78",
+          "users": 13,
+          "save_users": 5,
+          "saves": 7
+        },
+        {
+          "id": "Halloween-Trending-54",
+          "users": 13,
+          "save_users": 5,
+          "saves": 11
+        },
+        {
+          "id": "Autumn-14",
+          "users": 13,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "Baby-2",
+          "users": 13,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "Birthday-12",
+          "users": 13,
+          "save_users": 3,
+          "saves": 6
+        },
+        {
+          "id": "Birthday-28",
+          "users": 13,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "Birthday-58",
+          "users": 13,
+          "save_users": 3,
+          "saves": 7
+        },
+        {
+          "id": "Halloween-40",
+          "users": 13,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "Halloween-59",
+          "users": 13,
+          "save_users": 3,
+          "saves": 3
+        },
+        {
+          "id": "Autumn-40",
+          "users": 13,
+          "save_users": 2,
+          "saves": 9
+        },
+        {
+          "id": "Autumn-26",
+          "users": 13,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "Halloween-10",
+          "users": 13,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "Halloween-84",
+          "users": 13,
+          "save_users": 1,
+          "saves": 2
+        },
+        {
+          "id": "Teddy-Day-1",
+          "users": 13,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "Autumn-15",
+          "users": 13,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "Autumn-25",
+          "users": 13,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "Birthday-61",
+          "users": 13,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "Halloween-55",
+          "users": 13,
+          "save_users": 0,
+          "saves": 0
+        }
+      ]
     }
   },
   "months": {
@@ -4609,109 +5214,151 @@
     }
   },
   "overall": {
-    "window": "2026-08-23/2026-10-10",
+    "window": "2026-08-23/2026-10-17",
     "frames": [
       {
         "id": "Trending-1",
-        "users": 555,
-        "save_users": 132,
-        "saves": 196
+        "users": 612,
+        "save_users": 145,
+        "saves": 212
       },
       {
         "id": "Rose-Day-1",
-        "users": 418,
-        "save_users": 124,
-        "saves": 190
+        "users": 502,
+        "save_users": 146,
+        "saves": 225
       },
       {
         "id": "Chocolate-Day-1",
-        "users": 263,
-        "save_users": 43,
-        "saves": 93
+        "users": 302,
+        "save_users": 49,
+        "saves": 99
       },
       {
         "id": "Autumn-2",
-        "users": 231,
-        "save_users": 55,
-        "saves": 88
-      },
-      {
-        "id": "Trending-2",
-        "users": 227,
-        "save_users": 51,
-        "saves": 126
+        "users": 278,
+        "save_users": 64,
+        "saves": 102
       },
       {
         "id": "Gold-Diamonds-1",
-        "users": 220,
-        "save_users": 76,
-        "saves": 150
+        "users": 256,
+        "save_users": 84,
+        "saves": 160
+      },
+      {
+        "id": "Trending-2",
+        "users": 252,
+        "save_users": 56,
+        "saves": 131
       },
       {
         "id": "Winters-1",
-        "users": 210,
-        "save_users": 29,
-        "saves": 46
-      },
-      {
-        "id": "Birthday-8",
-        "users": 201,
-        "save_users": 77,
-        "saves": 115
+        "users": 241,
+        "save_users": 36,
+        "saves": 84
       },
       {
         "id": "Golden-1",
-        "users": 200,
-        "save_users": 56,
-        "saves": 70
-      },
-      {
-        "id": "Rose-Day-2",
-        "users": 177,
-        "save_users": 34,
-        "saves": 49
-      },
-      {
-        "id": "Birthday-59",
-        "users": 176,
-        "save_users": 58,
+        "users": 234,
+        "save_users": 64,
         "saves": 80
       },
       {
+        "id": "Birthday-8",
+        "users": 229,
+        "save_users": 86,
+        "saves": 139
+      },
+      {
+        "id": "Rose-Day-2",
+        "users": 208,
+        "save_users": 42,
+        "saves": 59
+      },
+      {
+        "id": "Birthday-59",
+        "users": 204,
+        "save_users": 67,
+        "saves": 93
+      },
+      {
         "id": "Metal-1",
-        "users": 175,
-        "save_users": 57,
-        "saves": 116
+        "users": 199,
+        "save_users": 63,
+        "saves": 126
       },
       {
         "id": "Diamonds-1",
-        "users": 155,
-        "save_users": 41,
-        "saves": 64
-      },
-      {
-        "id": "Birthday-21",
-        "users": 149,
-        "save_users": 41,
-        "saves": 53
-      },
-      {
-        "id": "Autumn-1",
-        "users": 147,
-        "save_users": 32,
-        "saves": 50
-      },
-      {
-        "id": "Birthday-57",
-        "users": 142,
-        "save_users": 46,
+        "users": 176,
+        "save_users": 48,
         "saves": 75
       },
       {
+        "id": "Birthday-21",
+        "users": 174,
+        "save_users": 48,
+        "saves": 65
+      },
+      {
+        "id": "Autumn-1",
+        "users": 172,
+        "save_users": 38,
+        "saves": 57
+      },
+      {
         "id": "Golden-2",
-        "users": 141,
-        "save_users": 42,
-        "saves": 78
+        "users": 166,
+        "save_users": 49,
+        "saves": 88
+      },
+      {
+        "id": "Halloween-18",
+        "users": 164,
+        "save_users": 47,
+        "saves": 100
+      },
+      {
+        "id": "Birthday-57",
+        "users": 158,
+        "save_users": 49,
+        "saves": 79
+      },
+      {
+        "id": "Birthday-5",
+        "users": 152,
+        "save_users": 50,
+        "saves": 74
+      },
+      {
+        "id": "Golden-3",
+        "users": 147,
+        "save_users": 47,
+        "saves": 84
+      },
+      {
+        "id": "Birthday-9",
+        "users": 146,
+        "save_users": 33,
+        "saves": 52
+      },
+      {
+        "id": "Birthday-60",
+        "users": 142,
+        "save_users": 26,
+        "saves": 34
+      },
+      {
+        "id": "Teddy-Day-1",
+        "users": 139,
+        "save_users": 13,
+        "saves": 17
+      },
+      {
+        "id": "Birthday-28",
+        "users": 138,
+        "save_users": 38,
+        "saves": 48
       },
       {
         "id": "Birthday-50",
@@ -4720,94 +5367,64 @@
         "saves": 62
       },
       {
-        "id": "Birthday-5",
-        "users": 136,
-        "save_users": 47,
-        "saves": 69
-      },
-      {
-        "id": "Golden-3",
-        "users": 130,
-        "save_users": 41,
-        "saves": 73
-      },
-      {
-        "id": "Ripped-1",
-        "users": 130,
-        "save_users": 26,
-        "saves": 36
-      },
-      {
-        "id": "Birthday-9",
-        "users": 128,
-        "save_users": 29,
-        "saves": 45
-      },
-      {
-        "id": "Teddy-Day-1",
-        "users": 126,
-        "save_users": 12,
-        "saves": 16
-      },
-      {
-        "id": "Gold-Diamonds-2",
-        "users": 125,
-        "save_users": 44,
-        "saves": 478
-      },
-      {
-        "id": "Birthday-28",
-        "users": 125,
-        "save_users": 35,
-        "saves": 44
-      },
-      {
-        "id": "Trending-3",
-        "users": 124,
-        "save_users": 11,
-        "saves": 33
-      },
-      {
-        "id": "Birthday-60",
-        "users": 123,
-        "save_users": 22,
-        "saves": 30
-      },
-      {
-        "id": "Womens-Day-1",
-        "users": 123,
-        "save_users": 17,
-        "saves": 29
-      },
-      {
         "id": "Autumn-7",
-        "users": 120,
-        "save_users": 23,
-        "saves": 31
+        "users": 136,
+        "save_users": 25,
+        "saves": 34
       },
       {
-        "id": "Birthday-27",
-        "users": 119,
+        "id": "Autumn-20",
+        "users": 135,
+        "save_users": 32,
+        "saves": 47
+      },
+      {
+        "id": "Autumn-8",
+        "users": 135,
         "save_users": 26,
-        "saves": 33
+        "saves": 39
+      },
+      {
+        "id": "Autumn-43",
+        "users": 130,
+        "save_users": 38,
+        "saves": 48
+      },
+      {
+        "id": "Wooden-2",
+        "users": 130,
+        "save_users": 32,
+        "saves": 93
       }
     ]
   },
   "current": {
-    "week": "2026-10-04",
+    "week": "2026-10-11",
     "trending": [
       "Halloween-18",
-      "Halloween-6",
-      "Halloween-23",
-      "Halloween-54",
       "Autumn-17",
-      "Birthday-14",
-      "Winters-1",
-      "Flowers-3",
+      "Halloween-6",
+      "Halloween-Trending-46",
+      "Halloween-23",
+      "Halloween-Trending-47",
       "Halloween-32",
-      "Halloween-99",
-      "Birthday-16",
-      "Halloween-35"
+      "Halloween-54",
+      "Halloween-Trending-48",
+      "Rose-Day-1",
+      "Halloween-35",
+      "Halloween-Trending-51"
+    ],
+    "last7": [
+      "Halloween-18",
+      "Rose-Day-1",
+      "Autumn-17",
+      "Halloween-6",
+      "Trending-1",
+      "Autumn-2",
+      "Halloween-23",
+      "Halloween-Trending-46",
+      "Chocolate-Day-1",
+      "Halloween-Trending-47"
     ],
     "month": [
       "Trending-1",
@@ -4846,33 +5463,33 @@
       "Rose-Day-1",
       "Chocolate-Day-1",
       "Autumn-2",
-      "Trending-2",
       "Gold-Diamonds-1",
+      "Trending-2",
       "Winters-1",
-      "Birthday-8",
       "Golden-1",
+      "Birthday-8",
       "Rose-Day-2",
       "Birthday-59",
       "Metal-1",
       "Diamonds-1",
       "Birthday-21",
       "Autumn-1",
-      "Birthday-57",
       "Golden-2",
-      "Birthday-50",
+      "Halloween-18",
+      "Birthday-57",
       "Birthday-5",
       "Golden-3",
-      "Ripped-1",
       "Birthday-9",
-      "Teddy-Day-1",
-      "Gold-Diamonds-2",
-      "Birthday-28",
-      "Trending-3",
       "Birthday-60",
-      "Womens-Day-1",
+      "Teddy-Day-1",
+      "Birthday-28",
+      "Birthday-50",
       "Autumn-7",
-      "Birthday-27"
+      "Autumn-20",
+      "Autumn-8",
+      "Autumn-43",
+      "Wooden-2"
     ]
   },
-  "generated": "2026-10-12"
+  "generated": "2026-10-19"
 }
