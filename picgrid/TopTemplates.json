@@ -604,6 +604,611 @@
           "saves": 4
         }
       ]
+    },
+    "2026-10-18": {
+      "window": "2026-10-18/2026-10-24",
+      "frames": [
+        {
+          "id": "SimpleCollage_1.png",
+          "users": 402,
+          "save_users": 226,
+          "saves": 498
+        },
+        {
+          "id": "SimpleCollage_8.png",
+          "users": 187,
+          "save_users": 95,
+          "saves": 200
+        },
+        {
+          "id": "SimpleCollage_2.png",
+          "users": 171,
+          "save_users": 93,
+          "saves": 173
+        },
+        {
+          "id": "shape_collage_25.png",
+          "users": 90,
+          "save_users": 27,
+          "saves": 37
+        },
+        {
+          "id": "SimpleCollage_6.png",
+          "users": 77,
+          "save_users": 29,
+          "saves": 43
+        },
+        {
+          "id": "SimpleCollage.png",
+          "users": 72,
+          "save_users": 31,
+          "saves": 93
+        },
+        {
+          "id": "halloween_6_thumb.jpeg",
+          "users": 69,
+          "save_users": 12,
+          "saves": 14
+        },
+        {
+          "id": "ShapesCollageNo_1.png",
+          "users": 65,
+          "save_users": 4,
+          "saves": 5
+        },
+        {
+          "id": "SimpleCollage_138.jpg",
+          "users": 61,
+          "save_users": 29,
+          "saves": 42
+        },
+        {
+          "id": "FilmFrame_1_Thumb.jpg",
+          "users": 52,
+          "save_users": 8,
+          "saves": 8
+        },
+        {
+          "id": "SimpleCollage_35.png",
+          "users": 45,
+          "save_users": 27,
+          "saves": 113
+        },
+        {
+          "id": "SimpleCollage_3.png",
+          "users": 42,
+          "save_users": 23,
+          "saves": 46
+        },
+        {
+          "id": "halloween_18_thumb.jpeg",
+          "users": 41,
+          "save_users": 13,
+          "saves": 15
+        },
+        {
+          "id": "classicSquare_21_thumb.jpg",
+          "users": 39,
+          "save_users": 5,
+          "saves": 7
+        },
+        {
+          "id": "classicSquare_thumb_4.jpg",
+          "users": 36,
+          "save_users": 18,
+          "saves": 29
+        },
+        {
+          "id": "shape_collage_23.png",
+          "users": 35,
+          "save_users": 6,
+          "saves": 9
+        },
+        {
+          "id": "SimpleCollage_23.png",
+          "users": 32,
+          "save_users": 17,
+          "saves": 41
+        },
+        {
+          "id": "SimpleCollage_5.png",
+          "users": 32,
+          "save_users": 16,
+          "saves": 26
+        },
+        {
+          "id": "StoryCollage_16_Thumb.jpg",
+          "users": 32,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "SimpleCollage_14.png",
+          "users": 31,
+          "save_users": 18,
+          "saves": 43
+        },
+        {
+          "id": "SimpleCollage_130.png",
+          "users": 31,
+          "save_users": 9,
+          "saves": 13
+        },
+        {
+          "id": "shape_collage_24.png",
+          "users": 31,
+          "save_users": 6,
+          "saves": 8
+        },
+        {
+          "id": "SimpleCollage_2a.jpg",
+          "users": 30,
+          "save_users": 10,
+          "saves": 15
+        },
+        {
+          "id": "SimpleCollage_135.jpg",
+          "users": 29,
+          "save_users": 13,
+          "saves": 21
+        },
+        {
+          "id": "ShapesCollageNo_2a.jpg",
+          "users": 29,
+          "save_users": 7,
+          "saves": 8
+        },
+        {
+          "id": "FilmFrame_20_Thumb.jpg",
+          "users": 28,
+          "save_users": 1,
+          "saves": 41
+        },
+        {
+          "id": "classicSquare_thumb_5.jpg",
+          "users": 27,
+          "save_users": 16,
+          "saves": 25
+        },
+        {
+          "id": "SimpleCollage_136.jpg",
+          "users": 27,
+          "save_users": 13,
+          "saves": 46
+        },
+        {
+          "id": "FilmFrame_11_Thumb.jpg",
+          "users": 27,
+          "save_users": 7,
+          "saves": 10
+        },
+        {
+          "id": "MaskCollage_thumb_1.jpg",
+          "users": 26,
+          "save_users": 1,
+          "saves": 2
+        },
+        {
+          "id": "SimpleCollage_3a.jpg",
+          "users": 25,
+          "save_users": 9,
+          "saves": 18
+        },
+        {
+          "id": "classicSquare_thumb_2.jpg",
+          "users": 24,
+          "save_users": 17,
+          "saves": 21
+        },
+        {
+          "id": "SimpleCollage_46.png",
+          "users": 24,
+          "save_users": 13,
+          "saves": 15
+        },
+        {
+          "id": "FancyCollage_1_Thumb.jpg",
+          "users": 24,
+          "save_users": 8,
+          "saves": 10
+        },
+        {
+          "id": "shape_collage_22.png",
+          "users": 24,
+          "save_users": 8,
+          "saves": 15
+        },
+        {
+          "id": "FilmFrame_5_Thumb.jpg",
+          "users": 24,
+          "save_users": 4,
+          "saves": 4
+        },
+        {
+          "id": "halloween_49_thumb.jpeg",
+          "users": 23,
+          "save_users": 8,
+          "saves": 10
+        },
+        {
+          "id": "FancyCollage_5_Thumb.jpg",
+          "users": 22,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "SimpleCollage_129.png",
+          "users": 21,
+          "save_users": 9,
+          "saves": 27
+        },
+        {
+          "id": "SimpleCollage_4.png",
+          "users": 21,
+          "save_users": 9,
+          "saves": 19
+        },
+        {
+          "id": "FancyCollage_10_Thumb.png",
+          "users": 21,
+          "save_users": 8,
+          "saves": 11
+        },
+        {
+          "id": "InstaStyleThumb_1.jpg",
+          "users": 21,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "FilmFrame_13_Thumb.jpg",
+          "users": 20,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "SimpleCollage_55.png",
+          "users": 19,
+          "save_users": 12,
+          "saves": 24
+        },
+        {
+          "id": "halloween_12_thumb.jpeg",
+          "users": 19,
+          "save_users": 5,
+          "saves": 6
+        },
+        {
+          "id": "SimpleCollage_114.png",
+          "users": 18,
+          "save_users": 14,
+          "saves": 27
+        },
+        {
+          "id": "halloween_7_thumb.jpeg",
+          "users": 18,
+          "save_users": 7,
+          "saves": 10
+        },
+        {
+          "id": "classicSquare_thumb_3.jpg",
+          "users": 18,
+          "save_users": 6,
+          "saves": 22
+        },
+        {
+          "id": "SimpleCollage_61.png",
+          "users": 18,
+          "save_users": 5,
+          "saves": 7
+        },
+        {
+          "id": "hexagon_11_thumb.jpg",
+          "users": 18,
+          "save_users": 5,
+          "saves": 9
+        },
+        {
+          "id": "mirrorCollage_1.jpg",
+          "users": 18,
+          "save_users": 5,
+          "saves": 5
+        },
+        {
+          "id": "halloween_14_thumb.jpeg",
+          "users": 18,
+          "save_users": 3,
+          "saves": 3
+        },
+        {
+          "id": "SimpleCollage_134.png",
+          "users": 17,
+          "save_users": 6,
+          "saves": 12
+        },
+        {
+          "id": "halloween_1_thumb.jpeg",
+          "users": 17,
+          "save_users": 4,
+          "saves": 5
+        },
+        {
+          "id": "ShapesCollageNo_29.jpg",
+          "users": 17,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "FancyCollageDiagnol_thumb_1.png",
+          "users": 17,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "SimpleCollage_37.png",
+          "users": 17,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "SimpleCollage_51.png",
+          "users": 16,
+          "save_users": 9,
+          "saves": 11
+        },
+        {
+          "id": "SimpleCollage_68.jpg",
+          "users": 16,
+          "save_users": 9,
+          "saves": 10
+        },
+        {
+          "id": "circle_collage_19.png",
+          "users": 16,
+          "save_users": 5,
+          "saves": 8
+        },
+        {
+          "id": "hexagon_10_thumb.jpg",
+          "users": 16,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "halloween_13_thumb.jpeg",
+          "users": 15,
+          "save_users": 8,
+          "saves": 13
+        },
+        {
+          "id": "StoryCollage_13_Thumb.jpg",
+          "users": 15,
+          "save_users": 7,
+          "saves": 10
+        },
+        {
+          "id": "halloween_11_thumb.jpeg",
+          "users": 15,
+          "save_users": 6,
+          "saves": 8
+        },
+        {
+          "id": "ShapeCollage_32.png",
+          "users": 15,
+          "save_users": 4,
+          "saves": 5
+        },
+        {
+          "id": "classicSquare_thumb_6.jpg",
+          "users": 15,
+          "save_users": 3,
+          "saves": 4
+        },
+        {
+          "id": "InstaStyleThumb_6.jpg",
+          "users": 15,
+          "save_users": 2,
+          "saves": 3
+        },
+        {
+          "id": "diamond_6_thumb.jpg",
+          "users": 15,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "StoryCollage_1_Thumb.jpg",
+          "users": 15,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "StoryCollage_6_Thumb.jpg",
+          "users": 14,
+          "save_users": 7,
+          "saves": 8
+        },
+        {
+          "id": "halloween_51_thumb.jpeg",
+          "users": 14,
+          "save_users": 6,
+          "saves": 7
+        },
+        {
+          "id": "SimpleCollage_130a.jpg",
+          "users": 14,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "circle_16_thumb.jpg",
+          "users": 14,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "InstaStyleThumb_2.jpg",
+          "users": 13,
+          "save_users": 6,
+          "saves": 8
+        },
+        {
+          "id": "hearts_couple_thumb.jpg",
+          "users": 13,
+          "save_users": 5,
+          "saves": 7
+        },
+        {
+          "id": "FilmFrame_25_Thumb.jpg",
+          "users": 13,
+          "save_users": 4,
+          "saves": 6
+        },
+        {
+          "id": "SimpleCollage_20a.jpg",
+          "users": 13,
+          "save_users": 4,
+          "saves": 4
+        },
+        {
+          "id": "SimpleCollage_7.png",
+          "users": 13,
+          "save_users": 4,
+          "saves": 9
+        },
+        {
+          "id": "StoryCollage_12_Thumb.jpg",
+          "users": 13,
+          "save_users": 4,
+          "saves": 9
+        },
+        {
+          "id": "halloween_22_thumb.jpeg",
+          "users": 13,
+          "save_users": 4,
+          "saves": 4
+        },
+        {
+          "id": "StoryCollage_19_Thumb.jpg",
+          "users": 13,
+          "save_users": 3,
+          "saves": 3
+        },
+        {
+          "id": "InstaStyleThumb_6a.jpg",
+          "users": 13,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "SimpleCollage_133.png",
+          "users": 13,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "halloween_53_thumb.jpeg",
+          "users": 13,
+          "save_users": 2,
+          "saves": 6
+        },
+        {
+          "id": "birthday_thumb_6.jpeg",
+          "users": 13,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "cat_love_thumb.jpg",
+          "users": 13,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "hexagon_4_thumb.jpg",
+          "users": 12,
+          "save_users": 8,
+          "saves": 14
+        },
+        {
+          "id": "SimpleCollage_137.jpg",
+          "users": 12,
+          "save_users": 6,
+          "saves": 8
+        },
+        {
+          "id": "StoryCollage_17_Thumb.jpg",
+          "users": 12,
+          "save_users": 3,
+          "saves": 5
+        },
+        {
+          "id": "halloween_52_thumb.jpeg",
+          "users": 12,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "ShapesCollageNo_6.png",
+          "users": 12,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "StoryCollage_18_Thumb.jpg",
+          "users": 12,
+          "save_users": 1,
+          "saves": 2
+        },
+        {
+          "id": "AutumnCollageThumbs_9.jpeg",
+          "users": 12,
+          "save_users": 0,
+          "saves": 0
+        },
+        {
+          "id": "halloween_5_thumb.jpeg",
+          "users": 11,
+          "save_users": 4,
+          "saves": 5
+        },
+        {
+          "id": "halloween_4_thumb.jpeg",
+          "users": 11,
+          "save_users": 3,
+          "saves": 3
+        },
+        {
+          "id": "FilmFrame_17_Thumb.jpg",
+          "users": 11,
+          "save_users": 2,
+          "saves": 3
+        },
+        {
+          "id": "SimpleCollage_114a.jpg",
+          "users": 11,
+          "save_users": 2,
+          "saves": 3
+        },
+        {
+          "id": "halloween_10_thumb.jpeg",
+          "users": 11,
+          "save_users": 2,
+          "saves": 2
+        },
+        {
+          "id": "InstaStyleThumb_4.jpg",
+          "users": 11,
+          "save_users": 1,
+          "saves": 1
+        },
+        {
+          "id": "SimpleCollage_131.png",
+          "users": 11,
+          "save_users": 1,
+          "saves": 1
+        }
+      ]
     }
   },
   "months": {},
@@ -793,20 +1398,20 @@
     ]
   },
   "current": {
-    "week": "2026-10-11",
+    "week": "2026-10-18",
     "trending": [
       "SimpleCollage_1.png",
-      "SimpleCollage_2.png",
-      "shape_collage_25.png",
       "SimpleCollage_8.png",
-      "SimpleCollage.png",
-      "SimpleCollage_138.jpg",
-      "ShapesCollageNo_1.png",
-      "SimpleCollage_6.png",
-      "FilmFrame_1_Thumb.jpg",
+      "SimpleCollage_2.png",
       "halloween_6_thumb.jpeg",
-      "SimpleCollage_5.png",
-      "SimpleCollage_2a.jpg"
+      "halloween_18_thumb.jpeg",
+      "halloween_12_thumb.jpeg",
+      "SimpleCollage_35.png",
+      "classicSquare_21_thumb.jpg",
+      "SimpleCollage_37.png",
+      "halloween_1_thumb.jpeg",
+      "circle_collage_19.png",
+      "SimpleCollage_6.png"
     ],
     "last7": [
       "SimpleCollage_1.png",
@@ -815,8 +1420,8 @@
       "shape_collage_25.png",
       "SimpleCollage_6.png",
       "SimpleCollage.png",
-      "ShapesCollageNo_1.png",
       "halloween_6_thumb.jpeg",
+      "ShapesCollageNo_1.png",
       "SimpleCollage_138.jpg",
       "FilmFrame_1_Thumb.jpg"
     ],
@@ -854,5 +1459,5 @@
       "FilmFrame_5_Thumb.jpg"
     ]
   },
-  "generated": "2026-10-24"
+  "generated": "2026-10-25"
 }
