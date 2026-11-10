@@ -1820,7 +1820,7 @@
       "frames": [
         {
           "id": "SimpleCollage_1.png",
-          "users": 469,
+          "users": 470,
           "save_users": 221,
           "saves": 569
         },
@@ -1828,17 +1828,17 @@
           "id": "SimpleCollage_8.png",
           "users": 172,
           "save_users": 91,
-          "saves": 249
+          "saves": 250
         },
         {
           "id": "SimpleCollage_2.png",
           "users": 156,
           "save_users": 80,
-          "saves": 199
+          "saves": 201
         },
         {
           "id": "SimpleCollage_6.png",
-          "users": 130,
+          "users": 131,
           "save_users": 44,
           "saves": 88
         },
@@ -1873,6 +1873,12 @@
           "saves": 165
         },
         {
+          "id": "SimpleCollage_2a.jpg",
+          "users": 58,
+          "save_users": 18,
+          "saves": 22
+        },
+        {
           "id": "ShapesCollageNo_2a.jpg",
           "users": 58,
           "save_users": 12,
@@ -1883,12 +1889,6 @@
           "users": 58,
           "save_users": 8,
           "saves": 9
-        },
-        {
-          "id": "SimpleCollage_2a.jpg",
-          "users": 57,
-          "save_users": 18,
-          "saves": 22
         },
         {
           "id": "SimpleCollage_3.png",
@@ -1960,7 +1960,7 @@
           "id": "SimpleCollage_23.png",
           "users": 33,
           "save_users": 19,
-          "saves": 98
+          "saves": 99
         },
         {
           "id": "SimpleCollage_4.png",
@@ -1981,6 +1981,12 @@
           "saves": 10
         },
         {
+          "id": "AutumnCollageThumbs_6.jpeg",
+          "users": 30,
+          "save_users": 5,
+          "saves": 11
+        },
+        {
           "id": "SimpleCollage_37.png",
           "users": 30,
           "save_users": 1,
@@ -1990,12 +1996,6 @@
           "id": "SimpleCollage_20.png",
           "users": 29,
           "save_users": 9,
-          "saves": 11
-        },
-        {
-          "id": "AutumnCollageThumbs_6.jpeg",
-          "users": 29,
-          "save_users": 5,
           "saves": 11
         },
         {
@@ -2814,12 +2814,12 @@
       "SimpleCollage_8.png",
       "SimpleCollage_2.png",
       "SimpleCollage_6.png",
-      "SimpleCollage.png",
       "classicSquare_thumb_3.jpg",
       "SimpleCollage_138.jpg",
+      "AutumnCollageThumbs_3.jpeg",
+      "SimpleCollage.png",
       "classicSquare_21_thumb.jpg",
-      "SimpleCollage_35.png",
-      "AutumnCollageThumbs_3.jpeg"
+      "SimpleCollage_35.png"
     ],
     "month": [
       "SimpleCollage_1.png",
@@ -2886,5 +2886,5 @@
       "FilmFrame_5_Thumb.jpg"
     ]
   },
-  "generated": "2026-11-09"
+  "generated": "2026-11-10"
 }
